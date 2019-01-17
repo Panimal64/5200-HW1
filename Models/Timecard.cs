@@ -84,7 +84,27 @@ namespace restapi.Models
                         Relationship = ActionRelationship.RecordLine,
                         Reference = $"/timesheets/{Identity.Value}/lines"
                     });
-                
+                      
+                    links.Add(new ActionLink() {
+                        Method = Method.Delete,
+                        Type = ContentTypes.Delete,
+                        Relationship = ActionRelationship.Delete,
+                        Reference = $"/timesheets/{Identity.Value}"
+                    }); 
+
+                     links.Add(new ActionLink() {
+                        Method = Method.Delete,
+                        Type = ContentTypes.PostUpdate,
+                        Relationship = ActionRelationship.PostUpdate,
+                        Reference = $"/timesheets/{Identity.Value}/line/ArrayIndexInt"
+                    });
+
+                     links.Add(new ActionLink() {
+                        Method = Method.Patch,
+                        Type = ContentTypes.Patch,
+                        Relationship = ActionRelationship.Patch,
+                        Reference = $"/timesheets/{Identity.Value}/line/ArrayIndexInt"
+                    });
                     break;
 
                 case TimecardStatus.Submitted:

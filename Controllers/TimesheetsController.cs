@@ -421,20 +421,20 @@ namespace restapi.Controllers
             }
         } 
 
-        //Prof code
-        //First param checks to see if timecard is even real
-        [HttpPost("{timecardID}/lines/{lineID}")]
-        public IActionResult UpdateLin(string timecardID, string lineID, [FromBody] TimecardLine timecardLine)
-        {
-            Timecard timecard = Database.Find(timecardID);
+        // //Prof code
+        // //First param checks to see if timecard is even real
+        // [HttpPost("{timecardID}/lines/{lineID}")]
+        // public IActionResult UpdateLin(string timecardID, string lineID, [FromBody] TimecardLine timecardLine)
+        // {
+        //     Timecard timecard = Database.Find(timecardID);
 
-            if (timecard ==  null){
-                return NotFound();
-            }
+        //     if (timecard ==  null){
+        //         return NotFound();
+        //     }
 
-            //does this line exist?
-            return Ok();
-        }
+        //     //does this line exist?
+        //     return Ok();
+        // }
 
 
         //HW #2 Replace(POST) a complete line item

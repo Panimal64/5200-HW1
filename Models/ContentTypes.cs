@@ -27,5 +27,12 @@ namespace restapi.Models
         public const string Rejection = "application/com.my-company.my-product.timesheet-rejection+json";
         
         public const string Approval = "application/com.my-company.my-product.timesheet-approval+json";
+    
+        public const string Delete = "application/com.my-company.my-product.timesheet-delete+json";
+
+        public const string PostUpdate = "application/com.my-company.my-product.timesheet-postupdate+json";
+
+        public const string Patch = "application/com.my-company.my-product.timesheet-patch+json";
+
     }
 }
