@@ -23,7 +23,7 @@ namespace restapi.Models
 
     public class  MissingDeletionError
     {
-        public int ErrorCode { get => 405; }
+        public int ErrorCode { get => 103; }
 
         public string Message { get => "No Timecard found to Delete that is set to Draft or Cancel"; }
     }
@@ -31,6 +31,6 @@ namespace restapi.Models
     {
         public int ErrorCode{ get => 104; }
         
-        public string Message { get => "You are not permitted to approve your own Timecard" ; }
+        public string Message { get => "This Resource is not permitted to do this" ; }
     }
 }

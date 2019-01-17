@@ -65,7 +65,7 @@ namespace restapi.Controllers
             Timecard timecard = Database.Find(id);
 
             if (timecard != null)
-            {   //Removed sort so Array indexes correspond with printout
+            {   //Removed sort so Array indexes correspond with printout array order
                 var lines = timecard.Lines;
                     //.OrderBy(l => l.Recorded)
                     //.ThenBy(l => l.WorkDate);
@@ -78,7 +78,7 @@ namespace restapi.Controllers
             }
         }
 
-        //POST timecard lines, using information from BODY add in WEEK/YEAR/ /HOURS/PROJECT
+        //POST timecard lines, using information from BODY add in WEEK/YEAR//HOURS/PROJECT
         [HttpPost("{id}/lines")]
         [Produces(ContentTypes.TimesheetLine)]
         [ProducesResponseType(typeof(AnnotatedTimecardLine), 200)]
@@ -130,6 +130,7 @@ namespace restapi.Controllers
         [ProducesResponseType(404)]
         [ProducesResponseType(typeof(InvalidStateError), 409)]
         [ProducesResponseType(typeof(EmptyTimecardError), 409)]
+        [ProducesResponseType(typeof(NotAuthorizedError), 409)]
         public IActionResult Submit(string id, [FromBody] Submittal submittal)
         {
             Timecard timecard = Database.Find(id);
@@ -145,10 +146,16 @@ namespace restapi.Controllers
                 {
                     return StatusCode(409, new EmptyTimecardError() { });
                 }
-                
-                var transition = new Transition(submittal, TimecardStatus.Submitted);
-                timecard.Transitions.Add(transition);
-                return Ok(transition);
+                if(timecard.Resource == submittal.Resource)
+                {
+                    var transition = new Transition(submittal, TimecardStatus.Submitted);
+                    timecard.Transitions.Add(transition);
+                    return Ok(transition);
+                }
+                else
+                {
+                    return StatusCode(409, new NotAuthorizedError() { });
+                }
             }
             else
             {
@@ -195,6 +202,7 @@ namespace restapi.Controllers
         [ProducesResponseType(404)]
         [ProducesResponseType(typeof(InvalidStateError), 409)]
         [ProducesResponseType(typeof(EmptyTimecardError), 409)]
+        [ProducesResponseType(typeof(NotAuthorizedError), 409)]
         public IActionResult Cancel(string id, [FromBody] Cancellation cancellation)
         {
             Timecard timecard = Database.Find(id);
@@ -205,10 +213,17 @@ namespace restapi.Controllers
                 {
                     return StatusCode(409, new InvalidStateError() { });
                 }
-                
-                var transition = new Transition(cancellation, TimecardStatus.Cancelled);
-                timecard.Transitions.Add(transition);
-                return Ok(transition);
+                //Only you can cancel your timecard
+                if(timecard.Resource == cancellation.Resource)
+                {
+                    var transition = new Transition(cancellation, TimecardStatus.Cancelled);
+                    timecard.Transitions.Add(transition);
+                    return Ok(transition);
+                }
+                else
+                {
+                    return StatusCode(409, new NotAuthorizedError() { });
+                }
             }
             else
             {
@@ -253,6 +268,7 @@ namespace restapi.Controllers
         [ProducesResponseType(404)]
         [ProducesResponseType(typeof(InvalidStateError), 409)]
         [ProducesResponseType(typeof(EmptyTimecardError), 409)]
+        [ProducesResponseType(typeof(NotAuthorizedError), 409)]
         public IActionResult Close(string id, [FromBody] Rejection rejection)
         {
             Timecard timecard = Database.Find(id);
@@ -263,10 +279,16 @@ namespace restapi.Controllers
                 {
                     return StatusCode(409, new InvalidStateError() { });
                 }
-                
-                var transition = new Transition(rejection, TimecardStatus.Rejected);
-                timecard.Transitions.Add(transition);
-                return Ok(transition);
+                //Can't reject your own timecard
+                if(timecard.Resource != rejection.Resource){
+                    var transition = new Transition(rejection, TimecardStatus.Rejected);
+                    timecard.Transitions.Add(transition);
+                    return Ok(transition);
+                }
+                else
+                {
+                    return StatusCode(409, new NotAuthorizedError() { });
+                }
             }
             else
             {
@@ -311,6 +333,8 @@ namespace restapi.Controllers
         [ProducesResponseType(404)]
         [ProducesResponseType(typeof(InvalidStateError), 409)]
         [ProducesResponseType(typeof(EmptyTimecardError), 409)]
+        [ProducesResponseType(typeof(NotAuthorizedError), 409)]
+ 
         public IActionResult Approve(string id, [FromBody] Approval approval)
         {
             Timecard timecard = Database.Find(id);
@@ -374,7 +398,7 @@ namespace restapi.Controllers
         [Produces(ContentTypes.Transition)]         //Swagger can determin this stuff by sniffing it out
         [ProducesResponseType(200)]
         [ProducesResponseType(404)]
-        [ProducesResponseType(typeof(MissingDeletionError), 405)]
+        [ProducesResponseType(typeof(MissingDeletionError), 409)]
         public IActionResult Delete(string id)
         {   //Find timecard in database
             Timecard timecard = Database.Find(id);
@@ -388,7 +412,7 @@ namespace restapi.Controllers
                 }
                 else
                 {
-                    return StatusCode(405, new MissingDeletionError() { });
+                    return StatusCode(409, new MissingDeletionError() { });
                 }
             }
             else
@@ -441,8 +465,9 @@ namespace restapi.Controllers
             }
         }
         
+        //HW#3 Update (PATCH) a line item
         //PATCH basic framework, it works and keeps same GUID, but if changing any of the datetime features
-        //It doesn't change the workday.  Need to revise so that it will correct for this.
+        //It doesn't change the workday.  Need to revise so that it will correct for this. Possibly move logic to Timecardline?
         [HttpPatch("{id}/lines/{ArrayIndex}")]
         [Produces(ContentTypes.TimesheetLine)]
         [ProducesResponseType(typeof(AnnotatedTimecardLine), 200)]
