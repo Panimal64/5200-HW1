@@ -1,0 +1,42 @@
+/Users/dave/Downloads/SU_CPSC_5200_19WQ-master/restapi/bin/Debug/netcoreapp2.2/restapi.deps.json
+/Users/dave/Downloads/SU_CPSC_5200_19WQ-master/restapi/bin/Debug/netcoreapp2.2/restapi.runtimeconfig.json
+/Users/dave/Downloads/SU_CPSC_5200_19WQ-master/restapi/bin/Debug/netcoreapp2.2/restapi.runtimeconfig.dev.json
+/Users/dave/Downloads/SU_CPSC_5200_19WQ-master/restapi/bin/Debug/netcoreapp2.2/restapi.dll
+/Users/dave/Downloads/SU_CPSC_5200_19WQ-master/restapi/bin/Debug/netcoreapp2.2/restapi.pdb
+/Users/dave/Downloads/SU_CPSC_5200_19WQ-master/restapi/obj/Debug/netcoreapp2.2/restapi.csprojAssemblyReference.cache
+/Users/dave/Downloads/SU_CPSC_5200_19WQ-master/restapi/obj/Debug/netcoreapp2.2/restapi.csproj.CoreCompileInputs.cache
+/Users/dave/Downloads/SU_CPSC_5200_19WQ-master/restapi/obj/Debug/netcoreapp2.2/restapi.RazorAssemblyInfo.cache
+/Users/dave/Downloads/SU_CPSC_5200_19WQ-master/restapi/obj/Debug/netcoreapp2.2/restapi.RazorAssemblyInfo.cs
+/Users/dave/Downloads/SU_CPSC_5200_19WQ-master/restapi/obj/Debug/netcoreapp2.2/restapi.AssemblyInfoInputs.cache
+/Users/dave/Downloads/SU_CPSC_5200_19WQ-master/restapi/obj/Debug/netcoreapp2.2/restapi.AssemblyInfo.cs
+/Users/dave/Downloads/SU_CPSC_5200_19WQ-master/restapi/obj/Debug/netcoreapp2.2/restapi.RazorTargetAssemblyInfo.cache
+/Users/dave/Downloads/SU_CPSC_5200_19WQ-master/restapi/obj/Debug/netcoreapp2.2/restapi.dll
+/Users/dave/Downloads/SU_CPSC_5200_19WQ-master/restapi/obj/Debug/netcoreapp2.2/restapi.pdb
+/Users/dave/Documents/Seattle U/Grad Classes/CPSC 5200 Architecture/restapi/bin/Debug/netcoreapp2.2/restapi.deps.json
+/Users/dave/Documents/Seattle U/Grad Classes/CPSC 5200 Architecture/restapi/bin/Debug/netcoreapp2.2/restapi.runtimeconfig.json
+/Users/dave/Documents/Seattle U/Grad Classes/CPSC 5200 Architecture/restapi/bin/Debug/netcoreapp2.2/restapi.runtimeconfig.dev.json
+/Users/dave/Documents/Seattle U/Grad Classes/CPSC 5200 Architecture/restapi/bin/Debug/netcoreapp2.2/restapi.dll
+/Users/dave/Documents/Seattle U/Grad Classes/CPSC 5200 Architecture/restapi/bin/Debug/netcoreapp2.2/restapi.pdb
+/Users/dave/Documents/Seattle U/Grad Classes/CPSC 5200 Architecture/restapi/obj/Debug/netcoreapp2.2/restapi.csprojAssemblyReference.cache
+/Users/dave/Documents/Seattle U/Grad Classes/CPSC 5200 Architecture/restapi/obj/Debug/netcoreapp2.2/restapi.csproj.CoreCompileInputs.cache
+/Users/dave/Documents/Seattle U/Grad Classes/CPSC 5200 Architecture/restapi/obj/Debug/netcoreapp2.2/restapi.RazorAssemblyInfo.cache
+/Users/dave/Documents/Seattle U/Grad Classes/CPSC 5200 Architecture/restapi/obj/Debug/netcoreapp2.2/restapi.RazorAssemblyInfo.cs
+/Users/dave/Documents/Seattle U/Grad Classes/CPSC 5200 Architecture/restapi/obj/Debug/netcoreapp2.2/restapi.AssemblyInfoInputs.cache
+/Users/dave/Documents/Seattle U/Grad Classes/CPSC 5200 Architecture/restapi/obj/Debug/netcoreapp2.2/restapi.AssemblyInfo.cs
+/Users/dave/Documents/Seattle U/Grad Classes/CPSC 5200 Architecture/restapi/obj/Debug/netcoreapp2.2/restapi.RazorTargetAssemblyInfo.cache
+/Users/dave/Documents/Seattle U/Grad Classes/CPSC 5200 Architecture/restapi/obj/Debug/netcoreapp2.2/restapi.dll
+/Users/dave/Documents/Seattle U/Grad Classes/CPSC 5200 Architecture/restapi/obj/Debug/netcoreapp2.2/restapi.pdb
+/Users/dave/Documents/Seattle U/Grad Classes/CPSC 5200 Architecture/restapi-crashing/bin/Debug/netcoreapp2.2/restapi.deps.json
+/Users/dave/Documents/Seattle U/Grad Classes/CPSC 5200 Architecture/restapi-crashing/bin/Debug/netcoreapp2.2/restapi.runtimeconfig.json
+/Users/dave/Documents/Seattle U/Grad Classes/CPSC 5200 Architecture/restapi-crashing/bin/Debug/netcoreapp2.2/restapi.runtimeconfig.dev.json
+/Users/dave/Documents/Seattle U/Grad Classes/CPSC 5200 Architecture/restapi-crashing/bin/Debug/netcoreapp2.2/restapi.dll
+/Users/dave/Documents/Seattle U/Grad Classes/CPSC 5200 Architecture/restapi-crashing/bin/Debug/netcoreapp2.2/restapi.pdb
+/Users/dave/Documents/Seattle U/Grad Classes/CPSC 5200 Architecture/restapi-crashing/obj/Debug/netcoreapp2.2/restapi.csprojAssemblyReference.cache
+/Users/dave/Documents/Seattle U/Grad Classes/CPSC 5200 Architecture/restapi-crashing/obj/Debug/netcoreapp2.2/restapi.csproj.CoreCompileInputs.cache
+/Users/dave/Documents/Seattle U/Grad Classes/CPSC 5200 Architecture/restapi-crashing/obj/Debug/netcoreapp2.2/restapi.RazorAssemblyInfo.cache
+/Users/dave/Documents/Seattle U/Grad Classes/CPSC 5200 Architecture/restapi-crashing/obj/Debug/netcoreapp2.2/restapi.RazorAssemblyInfo.cs
+/Users/dave/Documents/Seattle U/Grad Classes/CPSC 5200 Architecture/restapi-crashing/obj/Debug/netcoreapp2.2/restapi.AssemblyInfoInputs.cache
+/Users/dave/Documents/Seattle U/Grad Classes/CPSC 5200 Architecture/restapi-crashing/obj/Debug/netcoreapp2.2/restapi.AssemblyInfo.cs
+/Users/dave/Documents/Seattle U/Grad Classes/CPSC 5200 Architecture/restapi-crashing/obj/Debug/netcoreapp2.2/restapi.RazorTargetAssemblyInfo.cache
+/Users/dave/Documents/Seattle U/Grad Classes/CPSC 5200 Architecture/restapi-crashing/obj/Debug/netcoreapp2.2/restapi.dll
+/Users/dave/Documents/Seattle U/Grad Classes/CPSC 5200 Architecture/restapi-crashing/obj/Debug/netcoreapp2.2/restapi.pdb
